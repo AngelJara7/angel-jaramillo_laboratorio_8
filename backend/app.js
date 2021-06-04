@@ -30,6 +30,9 @@ const Users = {
             data: Data,
         });
     },
+    getUser: (req, res) => {
+        res.json(Data[req.params.id]);
+    },
     createUser: (req, res) => {
         Data.push(req.body);
         res.json({
@@ -41,6 +44,7 @@ const Users = {
 }
 
 app.get('/api/v1/users/', Users.getUsers);
+app.get('/api/v1/users/:id', Users.getUser);
 app.post('/api/v1/users/', Users.createUser);
 
 app.listen(port, () => {
