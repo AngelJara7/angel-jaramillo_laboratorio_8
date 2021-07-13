@@ -9,13 +9,15 @@ html(lang="en")
     body
         .main-container
             .main-form
-                h1 Todo
+                .main-tittle 
+                    h1 Todo
+                    #main-tittle-massage
                 form#task-form(action="")
                     input(type="text", name="task", placeholder="Introduce una tarea") 
                     button(type="submit") Guardar
                 .main-task-list
 
-    script(src="/static/js/app.js") 
+    script(src="/static/js/app.js")
 
 
 //- <input type="checkbox" name="">

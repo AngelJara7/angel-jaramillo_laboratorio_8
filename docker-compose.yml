@@ -1,5 +1,27 @@
 version: "3"
 
 services:
-    web:
-        
+    backend:
+        build:
+            context: ./backend
+        hostname: backend
+        image: lab8-backend
+        ports:
+            - "4000:4000"
+        volumes:
+            - "./backend/app.js:/code/app.js"
+            - "./backend/package.json:/code/package.json"
+    frontend:
+        build:
+            context: ./frontend
+        hostname: frontend
+        image: lab8-frontend
+        ports:
+            - "3000:3000"
+        volumes:
+            - "./frontend/server.js:/code/server.js"
+            - "./frontend/public/css/app.css:/code/public/css/app.css"
+            - "./frontend/public/img/eliminar-cruz.png:/code/public/img/eliminar-cruz.png"
+            - "./frontend/public/js/app.js:/code/public/js/app.js"
+            - "./frontend/views/index.pug:/code/views/index.pug"
+            - "./frontend/package.json:/code/package.json"

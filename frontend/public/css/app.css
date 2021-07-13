@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap');
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-form {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 30rem;
+    height: auto;
+}
+
+#task-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form input {
+    height: 2rem;
+    width: 15rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    padding-left: 1rem;
+}
+
+form button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    height: 2.4rem;
+}
+
+.main-task-list {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.main-task-list label {
+    margin: 0 1rem;
+}
+.main-task-list div{
+    margin: 0.5em;
+    
+}
+.main-tittle{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+}
+#main-tittle-massage{
+    color: green;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.delete{
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 0.3em;
+    float: right;
+    background: #fff;
+    background-image: url(/static/img/eliminar-cruz.png);
+    height: 1rem;
+    width: 1rem;
+    background-size: cover;
+}
+.delete:hover{
+    background-color: rgba(0, 0, 0, 0.24);
+}
+img{
+    height: 1em;
+    width: 1em;
+}
